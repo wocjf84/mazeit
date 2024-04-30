@@ -13,7 +13,7 @@ public class Character : MonoBehaviour {
 	Vector3[] DIRECTION = {new Vector3 (1, 0, 0), new Vector3 (0, 0, -1), new Vector3 (-1, 0, 0), new Vector3 (0, 0, 1)};
 
 
-	public int m_Direction = 0;
+	public int m_Direction2 = 0;
 	public bool m_isMove = false;
 	public int m_MoveCount = 0;
 	public bool m_isBack = false;
@@ -30,7 +30,7 @@ public class Character : MonoBehaviour {
 		if (m_isMove) {
 			m_MoveCount++;
 			Vector3 position = transform.localPosition;
-			switch (m_Direction) {
+			switch (m_Direction2) {
 			case UP:
 				position.z += 0.04f;
 				if( m_MoveCount > 4 ) {
@@ -60,7 +60,7 @@ public class Character : MonoBehaviour {
 				if( m_isBack ) {
 					GameManager.Instance.removeLine();
 				} else {
-					GameManager.Instance.setLine(m_Now_X, m_Now_Y, m_Direction);
+					GameManager.Instance.setLine(m_Now_X, m_Now_Y, m_Direction2);
 				}
 			}
 			transform.localPosition = position;
@@ -101,13 +101,13 @@ public class Character : MonoBehaviour {
 		for (int i = 0; i < 4; i++) {
 			if( !m_isBack ) {
 				if (!Physics.Raycast (transform.position, DIRECTION[i], out hit, 0.2f)) {
-					m_Direction = i;
+					m_Direction2 = i;
 					break;
 				}
 			} else {
 				if (Physics.Raycast (transform.position, DIRECTION[i], out hit, 0.2f)) {
 					if( hit.collider.tag.Equals("Line") ) {
-						m_Direction = i;
+						m_Direction2 = i;
 						break;
 					}
 				}

@@ -30,7 +30,7 @@ public class CameraHandle : MonoBehaviour {
 					if( tag.Equals("Line") ) {
 						m_Character.m_isBack = true;
 					}
-					m_Character.m_Direction = 0;
+					m_Character.m_Direction2 = 0;
 					m_Character.m_isMove = true;
 				}
 				m_isTouch = false;
@@ -41,7 +41,7 @@ public class CameraHandle : MonoBehaviour {
 					if( tag.Equals("Line") ) {
 						m_Character.m_isBack = true;
 					}
-					m_Character.m_Direction = 2;
+					m_Character.m_Direction2 = 2;
 					m_Character.m_isMove = true;
 				}
 				m_isTouch = false;
@@ -52,7 +52,7 @@ public class CameraHandle : MonoBehaviour {
 					if( tag.Equals("Line") ) {
 						m_Character.m_isBack = true;
 					}
-					m_Character.m_Direction = 3;
+					m_Character.m_Direction2 = 3;
 					m_Character.m_isMove = true;
 				}
 				m_isTouch = false;
@@ -63,7 +63,7 @@ public class CameraHandle : MonoBehaviour {
 					if( tag.Equals("Line") ) {
 						m_Character.m_isBack = true;
 					}
-					m_Character.m_Direction = 1;
+					m_Character.m_Direction2 = 1;
 					m_Character.m_isMove = true;
 				}
 				m_isTouch = false;
