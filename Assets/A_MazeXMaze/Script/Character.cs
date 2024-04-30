@@ -13,6 +13,7 @@ public class Character : MonoBehaviour {
 	Vector3[] DIRECTION = {new Vector3 (1, 0, 0), new Vector3 (0, 0, -1), new Vector3 (-1, 0, 0), new Vector3 (0, 0, 1)};
 
 	public int m_Direction = 0;
+
 	public bool m_isMove = false;
 	public int m_MoveCount = 0;
 	public bool m_isBack = false;
